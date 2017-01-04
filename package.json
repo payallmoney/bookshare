@@ -53,6 +53,7 @@
     "server": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
     "start": "npm run server:dev",
+    "start:web": "phonegap serve --browser  --autoreload -p 8000 ",
     "test": "npm run lint && karma start",
     "tslint": "tslint",
     "typedoc": "typedoc",

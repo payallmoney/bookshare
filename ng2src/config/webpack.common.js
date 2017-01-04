@@ -158,7 +158,7 @@ module.exports = function (options) {
      */
     plugins: [
       new AssetsPlugin({
-        path: helpers.root('../www'),
+        path: helpers.root('www'),
         filename: 'webpack-assets.json',
         prettyPrint: true
       }),

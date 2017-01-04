@@ -7,7 +7,7 @@ const EVENT = process.env.npm_lifecycle_event || '';
 
 // Helper functions
 var ROOT = path.resolve(__dirname, '../..');
-console.log(ROOT);
+
 function hasProcessFlag(flag) {
   return process.argv.join('').indexOf(flag) > -1;
 }
