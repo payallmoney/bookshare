@@ -3,6 +3,8 @@
  */
 
 const helpers = require('./helpers');
+
+
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
 
@@ -55,7 +57,7 @@ module.exports = function (options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-path
        */
-      path: helpers.root('../www'),
+      path: helpers.root('www'),
 
       /**
        * Specifies the name of each output file on disk.

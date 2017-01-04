@@ -57,9 +57,9 @@ module.exports = function (options) {
      */
     entry: {
 
-      'polyfills': './src/polyfills.browser.ts',
-      'main':      AOT ? './src/main.browser.aot.ts' :
-                  './src/main.browser.ts'
+      'polyfills': './ng2src/src/polyfills.browser.ts',
+      'main':      AOT ? './ng2src/src/main.browser.aot.ts' :
+                  './ng2src/src/main.browser.ts'
 
     },
 
@@ -78,7 +78,7 @@ module.exports = function (options) {
       extensions: ['.ts', '.js', '.json'],
 
       // An array of directory names to be resolved to the current directory
-      modules: [helpers.root('src'), helpers.root('node_modules')],
+      modules: [helpers.root('ng2src/src'), helpers.root('node_modules')],
 
     },
 
@@ -137,7 +137,7 @@ module.exports = function (options) {
         {
           test: /\.html$/,
           use: 'raw-loader',
-          exclude: [helpers.root('src/index.html')]
+          exclude: [helpers.root('ng2src/src/index.html')]
         },
 
         /* File loader for supporting images, for example, in CSS files.
@@ -203,7 +203,7 @@ module.exports = function (options) {
       new ContextReplacementPlugin(
         // The (\\|\/) piece accounts for path separators in *nix and Windows
         /angular(\\|\/)core(\\|\/)src(\\|\/)linker/,
-        helpers.root('src'), // location of your src
+        helpers.root('ng2src/src'), // location of your src
         {
           // your Angular Async Route paths relative to this root directory
         }
@@ -218,8 +218,8 @@ module.exports = function (options) {
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
       new CopyWebpackPlugin([
-        { from: 'src/assets', to: 'assets' },
-        { from: 'src/meta'}
+        { from: 'ng2src/src/assets', to: 'assets' },
+        { from: 'ng2src/src/meta'}
       ]),
 
 
@@ -232,7 +232,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: 'ng2src/src/index.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
