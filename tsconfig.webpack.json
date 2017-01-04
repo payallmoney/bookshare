@@ -10,7 +10,7 @@
     "noEmit": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src",
+    "baseUrl": "./ng2src/src",
     "paths": {
     },
     "lib": [
@@ -24,9 +24,9 @@
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "src/**/*.spec.ts",
-    "src/**/*.e2e.ts"
+    "www",
+    "./ng2src/src/**/*.spec.ts",
+    "./ng2src/src/**/*.e2e.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
